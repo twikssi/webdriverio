@@ -166,13 +166,16 @@ export const config = {
     // see also: https://webdriver.io/docs/dot-reporter
     // reporters: ['spec'],
 
-    reporters: [
-        // 'dot',
-        // 'spec'
-        ['junit', {
-            outputDir: './'
-        }]
-    ],
+    // reporters: [
+    //     // 'dot',
+    //     // 'spec'
+    //     ['junit', {
+    //         outputDir: './'
+    //     }]
+    // ],
+    reporters: ['spec', ['junit', {
+        outputDir: './reports/junit'
+     }]],
 
     // reporters: [
     //     'spec',
