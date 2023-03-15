@@ -5,6 +5,8 @@ logs
 # Output files
 reports
 output
+allure-report
+allure-results
 
 # Node.js dependencies
 node_modules

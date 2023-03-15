@@ -2,6 +2,7 @@
   "name": "my-new-project",
   "type": "module",
   "devDependencies": {
+    "@wdio/allure-reporter": "^8.5.0",
     "@wdio/cli": "^8.3.11",
     "@wdio/firefox-profile-service": "^8.4.0",
     "@wdio/junit-reporter": "^8.4.0",
@@ -18,6 +19,7 @@
     "test": "wdio run ./wdio.conf.js"
   },
   "dependencies": {
+    "allure-commandline": "^2.21.0",
     "chai": "^4.3.7",
     "node": "^19.6.1"
   }

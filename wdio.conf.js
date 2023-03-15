@@ -173,9 +173,17 @@ export const config = {
     //         outputDir: './'
     //     }]
     // ],
-    reporters: ['spec', ['junit', {
-        outputDir: './reports/junit'
-     }]],
+    reporters: [
+        ['allure', {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: true,
+        }],
+        'spec',
+        ['junit', {
+            outputDir: './reports/junit'
+        }]
+    ],
 
     // reporters: [
     //     'spec',
