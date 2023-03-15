@@ -10,7 +10,6 @@ class SearchResultsComponent {
 
     async waitUntilResultsAppears(amount){
         await Commands.waitUntilElemtentsAppears(this.searchResultsConstr, amount)
-            //'[class="a-section"] h2 a', amount)
     }
 
     async numberOfElementsHaveText(text) {
