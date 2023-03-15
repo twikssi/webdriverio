@@ -1,6 +1,3 @@
-// const video = require('wdio-video-reporter');
-import video from 'wdio-video-reporter'; 
-
 export const config = {
     //
     // ====================
@@ -182,10 +179,6 @@ export const config = {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: false,
-        }],
-        [ video, {
-            saveAllVideos: false,       // If true, also saves videos for successful test cases
-            videoSlowdownMultiplier: 3, // Higher to get slower videos, lower for faster videos [Value 1-100]
         }],
         'spec',
         ['junit', {
