@@ -5,7 +5,7 @@ class Commands {
         await browser.waitUntil(async () => {
             const elems = await $$(selectors)
             console.log("------------- " + elems.length)
-            if (elems.length >= amount) {
+            if (elems.length > amount) {
                 return true
             }
         }, {
