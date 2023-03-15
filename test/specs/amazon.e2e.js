@@ -15,8 +15,8 @@ describe('My Amazon tests', () => {
         await SearchPage.checkUrlSearchField(data.searchWordLaptop)
        
 
-        await SearchPage.searchResultsComponent.waitUntilResultsAppears(20)
-        let result = await SearchPage.searchResultsComponent.numberOfElementsHave('laptop')
+        await SearchPage.searchResultsComponent.waitUntilResultsAppears(expectedResult)
+        let result = await SearchPage.searchResultsComponent.numberOfElementsHaveText(data.searchWordLaptop)
         
         await expectChai(result).to.be.above(expectedResult);
         

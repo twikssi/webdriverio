@@ -13,7 +13,7 @@ class SearchResultsComponent {
             //'[class="a-section"] h2 a', amount)
     }
 
-    async numberOfElementsHave(text) {
+    async numberOfElementsHaveText(text) {
         let iterator = 0
         await this.searchResults.forEach(async (element) => {
             if ( (await element.getText()).toLowerCase().includes(text)) { iterator++ }

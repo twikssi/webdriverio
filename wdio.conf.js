@@ -173,11 +173,19 @@ export const config = {
     //         outputDir: './'
     //     }]
     // ],
+    hooks: {
+        afterStep: async function (step, scenario, { error, duration, passed }, context) {
+          if (error) {
+            await browser.takeScreenshot();
+          }
+        }
+      },
+
     reporters: [
         ['allure', {
             outputDir: 'allure-results',
             disableWebdriverStepsReporting: true,
-            disableWebdriverScreenshotsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
         }],
         'spec',
         ['junit', {
